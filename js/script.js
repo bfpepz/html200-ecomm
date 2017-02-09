@@ -57,8 +57,3 @@ var products = [
   console.log(details.description);
 }
 
-
-
-
-
-*/ 
