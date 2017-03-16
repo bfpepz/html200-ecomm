@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #E3EBFE, #B4B9C5, #7F838D)
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    padding: 2rem;
+		float: left;
+}
+
+.menu {
+    width: 25%;
+		list-style-type: none;
+}
+
+.menu li {
+		padding: 2rem;	 
+}
+
+button {
+	display: inline;
+  padding: 0 10rem 0 0;
+	font-family: 'Special Elite', cursive;
+	font-size: 1.2rem;
+}
+
+
+main {
+		text-align: center;
+}
+
+
+h1 {
+  font-family: 'Special Elite', cursive;
+	font-size: 3rem;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	text-decoration-color: none;
+}
+
+
+
+h2 {
+  font-family: 'Sorts Mill Goudy', serif;
+  text-align: center;
+}
+
+.dropdown {
+	display: inline;
+}
+
+.dropdown-content {
+	display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+		font-family: 'Special Elite', cursive;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#imagecontainer {
+	display: inline;
+}
+
+#imagecontainer img {
+	width: 50%;
+	height: auto;
+}
+
+footer { 
+  color:whitesmoke;
+	background: black;
+}
+  
+footer li {
+		padding: 0.2rem;
+}
+
+footer p {
+		float: right;
+}
+
+/* Item Specific Store Pages */ 
+
+.item-description {
+  font-family: 'Source Sans Pro', sans-serif;
+	text-align: left; 
+	padding: 1rem; 
+}
+
+.filter {
+	float: right;
+}
+
+.item-header {
+	font-size: 2rem;
+	text-align: center;
+	padding: 0 0 2rem 11rem; 
+	font-style: oblique;
+}
+
+
+.item-description {
+	text-align: center; 
+}
+
+h4 {
+	padding: 0 0 0.5rem 2rem; 
+	font-size: 1.2rem; 
+}
