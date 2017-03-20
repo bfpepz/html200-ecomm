@@ -47,13 +47,21 @@ var products = [
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
   }
-]
 
-  for (i=0; i < products.length; i++) {
-  var details = products[i];
-  
-  console.log(details.name);
-  console.log(details.price);
-  console.log(details.description);
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
 }
+
+
 
