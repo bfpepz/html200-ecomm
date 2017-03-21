@@ -41,6 +41,18 @@ button {
 	font-size: 1.2rem;
 }
 
+.add-cart {
+	display: inline-flex;
+	font-size: 1rem;
+	font-family: 'Source Sans Pro';
+}
+
+.remove-cart {
+	display: inline-flex;
+	font-size: 1rem;
+	font-family: 'Source Sans Pro';
+}
+
 
 main {
 		text-align: center;
@@ -102,6 +114,7 @@ h2 {
 footer { 
   color:whitesmoke;
 	background: black;
+	width: 100%; 
 }
   
 footer li {
