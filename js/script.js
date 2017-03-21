@@ -47,21 +47,84 @@ var products = [
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
   }
+];
 
-var myIndex = 0;
-carousel();
+var cart []; 
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 9000);    
+function compareFunc(a,b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase())
+    return -1;
+  if (a.name.toLowerCase() > b.name.toLowerCase())
+    return 1;
+  return 0;
+}
+function compareNumbers(a,b) {
+  return a.price - b.price;
 }
 
+function capture()
+{
+  console.log(document.cartInfo.filter.value);
+  var sortBy = document.cartInfo.filter.value;
+  if (sortBy == "price") {
+    products.sort(compareNumbers);
+    console.log(products);
+  }
+  else if (sortBy = "name") {
+    products.sort(compareFunc);
+    console.log(products);
+  }
+  event.preventDefault();
+}
 
+function sumPrices(cartArray) {
+  var sum = 0;
+  for (var i = 0; i < cartArray.length; i++) {
+    sum = sum + cartArray[i].price;
+  }
+  console.log(sum);
+}
+	
 
+function addItem(item) {
+  var index = cart.indexOf(item);
+  var cartItems;
+  var output;
+  if (index == -1) {
+    cart.push(item);
+    output = " " + cart.length;
+    cartItems = document.getElementById('items');
+    cartItems.innerHTML = output;
+  }
+  console.log(cart);
+}
+
+function removeItem(item) {
+  var index = cart.indexOf(item);
+  var output;
+  var cartItems;
+  if (index != -1) {
+    cart.splice(index, 1);
+    output = "<p>" + cart.length + "</p>";
+    cartItems = document.getElementById('items');
+    if (cart.length == 0) {
+      cartItems.innerHTML = "";
+    } else {
+    }
+  }
+  console.log(cart);
+}
+
+function itemCount {
+	document.getElementsByClassName("fa fa-shopping-cart fa-2x");
+  var numberItems = cart.length;
+  console.log(cart);
+  console.log(cart.length);
+	if (numberItems > 0) {
+    cartEl.innerHTML= cart.length;
+  }
+  else {
+    cartEl.innerHTML = "Nothing in the cart!"
+
+  }
+}
